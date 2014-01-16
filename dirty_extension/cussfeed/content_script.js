@@ -31,37 +31,12 @@ function walk(node)
 
 function cuss_form(tag, word)
 {
-    switch (tag)
-    {
-    case 'FW': //foreign word
-    case 'NN': //singular noun
-    case 'VB': //verb, base form
-    case 'VBP': // verb, present tense
-	return 'fuck'
-    case 'JJ': //adjective
-    case 'VBG': //gerund
-	return 'fucking'
-    case 'JJR': //comparative adjective
-    case 'RBR': //comparative adverb
-	return 'fuckier'
-    case 'JJS': //superlative adjective
-    case 'RBS': //superlative adverb
-	return 'fuckiest'
-    case 'NNS': //plural noun
-    case 'NNPS': //plural proper noun
-    case 'VBZ': //verb, present third-person
-	return 'fucks'
-    case 'NNP': //singular proper noun
-	return 'fucker'
-    case 'RB': //adverb
-	return 'fuckily'
-    case 'VBD': //verb, past tense
-    case 'VBN': //verb, past part
-	return 'fucked'
-    case 'DT':
-	if (word.toLowerCase() == 'an'){return 'a'}//simple and powerful correction
-    default:
-	return word
+    try {
+	return cusses[tag][0];
+    } catch(err) {
+	//simple and powerful correction
+	if (word.toLowerCase() == 'an'){return 'a'}
+	return word;
     }
 }
 

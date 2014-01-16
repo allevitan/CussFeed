@@ -12,7 +12,7 @@
     [
 	{
 	    "matches": ["*://*.buzzfeed.com/*"],
-	    "js": ["pos/lexicon.js","pos/lexer.js","pos/POSTagger.js","content_script.js"],
+	    "js": ["pos/lexicon.js","pos/lexer.js","pos/POSTagger.js","cuss_list.js", "content_script.js"],
             "run_at": "document_end"
         }
     ]
