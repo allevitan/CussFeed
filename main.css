@@ -68,3 +68,11 @@ a.get-it.clean:hover {
     box-shadow:0 0 7px #67BCDB;
 }
 
+a.repo {
+    text-decoration:none;
+    color:#D0D0D0;
+}
+
+a.repo:hover {
+    color:#A0A0A0;
+}
