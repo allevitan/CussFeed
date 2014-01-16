@@ -3,6 +3,7 @@
   <title>CussFeed</title>
   <link rel="stylesheet" type="text/css" href="/main.css">
   <link rel="shortcut icon" type="image/png" href="/favicon.png">
+
   <!-- Google Analytics -->
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -16,6 +17,7 @@
     })();  
   </script>
 </head>
+
 <body>
   <div class="container">
     <h1>CussFeed</h1>
@@ -23,7 +25,17 @@
     <a class="get-it dirty" href="https://chrome.google.com/webstore/detail/dmjaflcmndbohlnlihhelfhopblhbdfc">Dirty</a>
     <a class="get-it clean" href="https://chrome.google.com/webstore/detail/lohiklefgpabjcbicpfeckfcbaimdhde">Clean</a>
     <p>
-      Installed as a chrome extension, it uses <a href="https://github.com/fortnightlabs/pos-js">pos-js</a> to replace each word on BuzzFeed.com with a curse. In our experience, it vastly improves the reporting.
+      Installed as a chrome or firefox extension, it uses <a href="https://github.com/fortnightlabs/pos-js">pos-js</a> to replace each word on BuzzFeed.com with the F-bomb. In our experience, it vastly improves the reporting.
     </p>
   </div>
+
+  <!-- direct user to correct download link -->
+  <script type="text/javascript">
+    window.onload = function(){ 
+      if (navigator.userAgent.match(/firefox/gi)){
+        document.getElementsByClassName('dirty')[0].href = "/cussfeed.xpi";
+        document.getElementsByClassName('clean')[0].href = "/cussfeed-clean.xpi";
+      }
+    }
+  </script>
 </body>
